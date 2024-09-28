@@ -26,7 +26,11 @@ This application is inspired by [Derek Sivers](https://sive.rs/book)  <br />
    ```
    node server.js
    ```
-   
+
+## Note
+
+While adding a new book, get the Open Library cover id from [Open Library](https://openlibrary.org/). This will correctly fetch the book covers.
+
 ## Preview
 
 1. 
