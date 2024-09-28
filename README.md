@@ -4,7 +4,7 @@ This is a book app developed using EJS, CSS, Node, Express and PostgreSql. Used 
 1. You can add a new book, edit and delete an existing book.
 2. You can sort the list of books by the date added or by ratings.
 
-This application is inspired from [](https://sive.rs/book)  <br />
+This application is inspired by [Derek Sivers](https://sive.rs/book)  <br />
 
 ## Getting started 
 
