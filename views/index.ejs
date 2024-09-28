@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>My Book List</title>
+</head>
+<body>
+    <h1>Books I’ve Read</h1>
+    <div>
+        <a href="?sortBy=rating">Sort by Rating</a> | <a href="?sortBy=date_read">Sort by Date Added</a>
+    </div>
+    <ul>
+        <% books.forEach(function(book) { %>
+            <li>
+                <img src="<%= book.cover_url %>" alt="Cover image for <%= book.title %>">
+                <div class="details">
+                    <strong><%= book.title %></strong>
+                    <p>by <%= book.author %></p>
+                    <p>Rating: <%= book.rating %> / 5</p>
+                    <p>Review: <%= book.review %></p>
+                    <p>Added on: <%= book.date_read %></p>
+                </div>
+                <div class="actions">
+                    <a class="edit" href="/edit/<%= book.id %>">Edit</a>
+                    <form action="/delete/<%= book.id %>" method="POST">
+                        <button class="delete" type="submit">Delete</button>
+                    </form>
+                </div>
+                
+            </li>
+        <% }) %>
+    </ul>
+    
+    <a href="/add">Add a New Book</a>
+</body>
+</html>
